@@ -27,5 +27,6 @@ $ git clone http://github.com/rockstardevs/kickstartrv3 myproject
 Customize constants to your project.
 
 ```shell
-$  sed -i '' -e 's/$TODO_GITREPO/myuser\/myproject/g' BUILD
+$ sed -i '' -e 's/$TODO_GITREPO/myuser\/myproject/g' BUILD
+$ sed -i '' -e 's/$TODO_PROJECTNAME/myproject/g' scripts/build_status.sh
 ```

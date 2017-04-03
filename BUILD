@@ -1,3 +1,3 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_prefix")
 
-go_prefix("github.com/rockstardevs/kickstartrv3")
+go_prefix("github.com/$TODO_GITREPO")
