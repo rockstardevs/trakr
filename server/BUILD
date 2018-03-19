@@ -13,7 +13,9 @@ go_library(
 
 go_binary(
     name = "server",
-    library = ":go_default_library",
-    linkstamp = "main",
+    embed = [":go_default_library"],
+    x_defs = {"main.BUILD_PROJECT": "{BUILD_PROJECT}",
+              "main.BUILD_VERSION": "{BUILD_VERSION}",
+              "main.BUILD_TIMESTAMP": "{BUILD_TIMESTAMP}"},
     visibility = ["//visibility:public"],
 )
