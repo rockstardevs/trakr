@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "BUILD_PROJECT $TODO_PROJECTNAME"
+echo "BUILD_PROJECT trakr"
 echo "BUILD_VERSION 1.0.0"

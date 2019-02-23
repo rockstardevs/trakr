@@ -13,6 +13,7 @@ import (
 
 	"github.com/golang/glog"
 	"github.com/gorilla/mux"
+	"github.com/rockstardevs/trakr/api"
 )
 
 var (
@@ -45,6 +46,13 @@ func main() {
 		buildTimestamp = time.Unix(i/1000, 0).Format("Mon Jan 2 15:04:05 MST 2006")
 	}
 	glog.Infof("%s frontend v%s (built: %s)", BUILD_PROJECT, BUILD_VERSION, buildTimestamp)
+
+	// API
+	a, err := api.NewAPI()
+	if err != nil {
+		glog.Exitf("failed to initialize API - ", err)
+	}
+	defer a.Close()
 
 	// Routing
 	router := mux.NewRouter()

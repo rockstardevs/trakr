@@ -1,3 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_prefix")
+load("@bazel_gazelle//:def.bzl", "gazelle")
 
-go_prefix("github.com/$TODO_GITREPO")
+# gazelle:prefix github.com/rockstardevs/trakr
+gazelle(name = "gazelle")
